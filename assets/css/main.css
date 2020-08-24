@@ -1,0 +1,67 @@
+/* VARIÁVEIS */
+:root {
+	--text-color: ;
+}
+
+/* RESET */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	vertical-align: baseline;
+}
+html,
+body {
+	color: var(--primary-color-0);
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	overflow-x: hidden;
+}
+ol,
+ul {
+	list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+}
+span {
+	display: inline-block;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+p {
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 14px;
+}
+img {
+	display: block;
+	max-width: 100%;
+}
+input,
+button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+button {
+	outline: 0;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+/* HEADER */
