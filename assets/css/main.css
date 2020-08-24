@@ -1,6 +1,8 @@
 /* VARIÁVEIS */
 :root {
-	--text-color: ;
+	--text-color-primary: #1e1e1e;
+	--title-color: #322153;
+	--primary-color: #34cb79;
 }
 
 /* RESET */
@@ -16,7 +18,8 @@
 }
 html,
 body {
-	color: var(--primary-color-0);
+	color: var(--text-color-primary);
+	background: #f0f0f5;
 }
 body {
 	font-family: 'Roboto', sans-serif;
@@ -33,6 +36,8 @@ h4,
 h5,
 h6 {
 	font-weight: inherit;
+	font-family: 'Ubuntu', sans-serif;
+	color: var(--title-color);
 }
 span {
 	display: inline-block;
@@ -64,4 +69,124 @@ button {
 	cursor: pointer;
 }
 
-/* HEADER */
+/* GERAL */
+
+.content {
+	width: 90%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+/* HOME */
+
+#page-home {
+	height: 100vh;
+	background: url('../image/home-background.svg') no-repeat;
+	background-position: 35vw bottom;
+}
+
+#page-home .content {
+	display: flex;
+	flex-flow: column wrap;
+	height: 100%;
+}
+
+header {
+	padding: 20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header a {
+	display: flex;
+	font-weight: 700;
+	color: var(--title-color);
+}
+
+header a span {
+	display: inline-block;
+	margin-right: 10px;
+	background: url('../image/log-in.svg') no-repeat;
+	width: 20px;
+	height: 20px;
+}
+
+#page-home .content article {
+	max-width: 560px;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.content article h1 {
+	font-weight: 700;
+	font-size: 54px;
+}
+
+.content article p {
+	font-size: 18px;
+	line-height: 28px;
+	margin-top: 20px;
+}
+
+.content article a {
+	width: 100%;
+	max-width: 360px;
+	background: var(--primary-color);
+	height: 60px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	margin-top: 40px;
+	transition: all .4s;
+}
+
+.content article a:hover {
+	background-color: #2fb86e;
+}
+
+.content article a span {
+	border-radius: 8px 0 0 8px;
+	width: 60px;
+	height: 60px;
+	background: rgba(0, 0, 0, .08);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.content article a span::after {
+	content: '';
+	background: url('../image/search.svg');
+	width: 20px;
+	height: 20px;
+}
+
+.content article a strong {
+	color: #fff;
+	flex: 1;
+	text-align: center;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 900px) {
+	#page-home {
+		background-position-x: 75vw;
+	}
+	#page-home .content {
+		align-items: center;
+		text-align: center;
+	}
+	header a {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	#page-home .content article {
+		align-items: center;
+	}
+}
